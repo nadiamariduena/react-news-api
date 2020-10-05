@@ -1,3 +1,97 @@
+* {
+  font-family: monospace;
+  box-sizing: border-box;
+}
+
+body,
+html,
+#root,
+.app {
+  height: 100%;
+}
+
 body {
-  background-color: greenyellow;
+  margin: 0;
+  #root {
+    .app {
+      background-color: rgba(253, 215, 0, 0.13);
+      .loading {
+        position: absolute;
+        right: 0;
+        z-index: 10;
+        height: 60px;
+        right: -110px;
+        transition: right 0.1s ease-in;
+        img {
+          height: 100%;
+        }
+      }
+      .show-loading {
+        right: 0;
+      }
+      .nav {
+        padding: 10px;
+        background-color: rgb(255, 255, 255);
+        height: 60px;
+        position: absolute;
+        width: 100%;
+        z-index: 1;
+        display: flex;
+        align-items: center;
+        input {
+          border: 0;
+          border-radius: 20px;
+          padding: 5px 10px;
+          background-color: rgba(125, 171, 65, 0.164);
+          color: rgba(2, 2, 2, 0.609);
+          &:focus {
+            outline: none;
+          }
+        }
+      }
+      .news {
+        padding: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        overflow: scroll;
+        height: 100%;
+        position: absolute;
+        padding-top: 60px;
+        .article {
+          background-color: white;
+          width: 23%;
+          border-radius: 10px;
+          margin: 10px;
+          cursor: pointer;
+          &:hover > .content {
+            // this will make that on hover the text content of the block you are hovering , will show.
+            opacity: 1;
+            height: fit-content;
+          }
+          .img {
+            width: 100%;
+            .content {
+              display: none;
+            }
+            img {
+              width: 100%;
+              border-radius: 10px 10px 0 0;
+            }
+          }
+          .title {
+            padding: 10px 5px;
+            color: rgb(71, 71, 71);
+          }
+          .content {
+            // this will set up the text content from line 69 to hidden
+
+            opacity: 0;
+            height: 0;
+          }
+        }
+      }
+    }
+  }
 }

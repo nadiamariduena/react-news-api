@@ -8,14 +8,11 @@ kensuke Koike collages
 
 </ul> -->
 
-### extra dependencies
+### Extra dependencies
 
-<ul>
-
-<li>
+```javascript
 npm i --save lodash
-</li>
-</ul>
+```
 
 #### DEBOUNCE - LODASH LIBRARY
 
@@ -39,3 +36,12 @@ listener, you would pass in the debounce. The debounce itself would then take my
 as an argument, along with the number 2000.
 
 </p>
+
+
+<br>
+
+[<img src="./src/img/preview.gif">](https://www.freecodecamp.org/news/debounce-explained-how-to-make-your-javascript-wait-for-your-user-to-finish-typing-2/
+)
+
+<br>
+<br>
